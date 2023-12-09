@@ -49,6 +49,17 @@ bossbar set time_limit:timer style notched_10
 # 発光用team(デフォルトで使ってるチームの色を変える)
 team modify FriendlyTeam color red
 
+# レコード取引の追加
+# uuidそのまま指定でいい気はする
+
+# pigstep
+data modify entity 60fd38a5-46a3-4318-b0a1-c279a55eae08 Offers.Recipes insert 12 value {xp: 1, buy: {id: "minecraft:music_disc_pigstep", Count: 1b}, sell: {id: "minecraft:porkchop", Count: 8b}, uses: 0, priceMultiplier: 0.0f, maxUses: 2147483647, rewardExp: 0b, demand: 0, specialPrice: 0, buyB: {id: "minecraft:air", Count: 65b}}
+# otherside
+data modify entity 60fd38a5-46a3-4318-b0a1-c279a55eae08 Offers.Recipes insert 13 value {xp: 1, buy: {id: "minecraft:music_disc_otherside", Count: 1b}, sell: {id: "minecraft:bell", Count: 1b}, uses: 0, priceMultiplier: 0.0f, maxUses: 2147483647, rewardExp: 0b, demand: 0, specialPrice: 0, buyB: {id: "minecraft:air", Count: 65b}}
+# 5
+data modify entity 60fd38a5-46a3-4318-b0a1-c279a55eae08 Offers.Recipes insert 14 value {xp: 1, buy: {id: "minecraft:music_disc_5", Count: 1b}, sell: {id: "minecraft:nether_star", Count: 32b}, uses: 0, priceMultiplier: 0.0f, maxUses: 2147483647, rewardExp: 0b, demand: 0, specialPrice: 0, buyB: {id: "minecraft:air", Count: 65b}}
+
+
 # 時送りの盾初期データset
 # player_item_tunner使うんで必要な量だけでいいです
 data modify storage time_limit:storage shield_data set value {tag:{version:1,Enchantments: [{lvl: 0s, id: "minecraft:unbreaking"}, {lvl: 0s, id: "minecraft:knockback"}, {lvl: 0s, id: "minecraft:sharpness"}],AttributeModifiers: [{Amount: 0.00d, Slot: "offhand", AttributeName: "generic.max_health", Operation: 2, UUID: [I; 0, 2, 0, 1], Name: "HP"}, {Amount: 0.0d, Slot: "offhand", AttributeName: "generic.movement_speed", Operation: 2, UUID: [I; 0, 2, 0, 2], Name: "SPD"}, {Amount: 0.00d, Slot: "offhand", AttributeName: "generic.knockback_resistance", Operation: 2, UUID: [I; 0, 2, 0, 3], Name: "KB"}, {Amount: 0.00d, Slot: "offhand", AttributeName: "generic.attack_damage", Operation: 2, UUID: [I; 0, 2, 0, 4], Name: "ATK"}, {Amount: 0.00d, Slot: "offhand", AttributeName: "generic.armor", Operation: 2, UUID: [I; 0, 2, 0, 5], Name: "AMR"}, {Amount: 0.00d, Slot: "offhand", AttributeName: "generic.attack_speed", Operation: 2, UUID: [I; 0, 2, 0, 6], Name: "ATS"}, {Amount: 0.00d, Slot: "mainhand", AttributeName: "generic.max_health", Operation: 2, UUID: [I; 0, 1, 0, 7], Name: "HP"}, {Amount: 0.00d, Slot: "mainhand", AttributeName: "generic.movement_speed", Operation: 2, UUID: [I; 0, 1, 0, 8], Name: "SPD"}, {Amount: 0.00d, Slot: "mainhand", AttributeName: "generic.knockback_resistance", Operation: 2, UUID: [I; 0, 1, 0, 9], Name: "KB"}, {Amount: 0.00d, Slot: "mainhand", AttributeName: "generic.attack_damage", Operation: 2, UUID: [I; 0, 1, 0, 10], Name: "ATK"}, {Amount: 0.00d, Slot: "mainhand", AttributeName: "generic.armor", Operation: 2, UUID: [I; 0, 1, 0, 11], Name: "AMR"}, {Amount: 0.00d, Slot: "mainhand", AttributeName: "generic.attack_speed", Operation: 2, UUID: [I; 0, 1, 0, 12], Name: "ATS"}]}}
