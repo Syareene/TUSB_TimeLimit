@@ -15,3 +15,7 @@ tellraw @a {"text":"時計が止まった。","color":"gold"}
 scoreboard players set Cloak Changed_Form 0
 # 戻ってそうな音
 execute as @a at @s run playsound minecraft:item.trident.thunder master @s ~ ~ ~ 1 1
+# 演出戻す
+weather clear 7d
+worldborder warning distance 0
+execute in minecraft:overworld run schedule clear tusb_remake:gimmic/clock/half_tick

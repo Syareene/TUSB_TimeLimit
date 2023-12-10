@@ -17,6 +17,14 @@ data modify storage tusb_remake: clock_stage set value 1
 
 # 追加部分
 
+#検証用
+#data modify storage tusb_remake: clock_ring_time set value 180
+#execute in minecraft:overworld run schedule function tusb_remake:gimmic/clock/ring 1t
+
+# 演出
+worldborder warning distance 20000
+weather thunder 7d
+execute in minecraft:overworld run schedule function tusb_remake:gimmic/clock/half_tick 10t
 # msg(一旦これ、いいのあったら変えたいです)
 tellraw @a [{"text":"時の流れがおかしくなった気がする。","bold": false,"color": "red"}]
 tellraw @a [{"text":"すぐに時の乱れを止めないと。","bold": false,"color": "red"}]
