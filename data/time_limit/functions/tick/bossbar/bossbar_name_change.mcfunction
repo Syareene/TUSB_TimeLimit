@@ -1,4 +1,4 @@
-#> time_limit:tick/bossbar_name_change
+#> time_limit:tick/bossbar/bossbar_name_change
 # ボスバーの数字が一桁だったときに1時間05分09秒みたいな感じで有効数字を揃えたいためにあるfunction
 
 # 本当はこの中身をstorageに入れて中身をいじって出したりするほうがスマートではあるんだろうね。うん
