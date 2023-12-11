@@ -73,9 +73,12 @@ scoreboard players set Clock_Island Option 1
 scoreboard players set Enhance_Boss Option 1
 
 # メニュートリガースコア
+scoreboard objectives add _ dummy {"text":"一時変数"}
 scoreboard objectives add ShowMenu trigger {"text": "メニュー表示"}
 scoreboard objectives add ChangeSkillSet trigger {"text": "スキル変更表示"}
 scoreboard objectives add SkillSetting trigger {"text": "スキル設定表示"}
+scoreboard objectives add SneakingTime minecraft.custom:sneak_time {"text":"スニーク時間"}
+scoreboard objectives add SneakFrequency dummy {"text":"スニーク頻度"}
 
 # 死亡検知用スコア
 scoreboard objectives add DeathCount deathCount
