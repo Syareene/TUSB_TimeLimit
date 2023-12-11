@@ -29,14 +29,14 @@ execute at @a[tag=Boss_Fighting] run summon spawner_minecart ~ ~7 ~ {Invulnerabl
 # 7/2x1.4142 = 4.9497
 
 
-summon bee ~ ~1 ~7 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee"],Rotation:[180.0f,0.0f]}
-summon bee ~4.95 ~1 ~4.95 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee"],Rotation:[135.0f,0.0f]}
-summon bee ~7 ~1 ~ {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee"],Rotation:[90.0f,0.0f]}
-summon bee ~4.95 ~1 ~-4.95 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee"],Rotation:[45.0f,0.0f]}
-summon bee ~ ~1 ~-7 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee"],Rotation:[0.0f,0.0f]}
-summon bee ~-4.95 ~1 ~-4.95 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee"],Rotation:[-45.0f,0.0f]}
-summon bee ~-7 ~1 ~ {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee"],Rotation:[-90.0f,0.0f]}
-summon bee ~-4.95 ~1 ~4.95 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee"],Rotation:[-135.0f,0.0f]}
+execute at @a[tag=Boss_Fighting] run summon bee ~ ~1 ~7 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee"],Rotation:[180.0f,0.0f]}
+execute at @a[tag=Boss_Fighting] run summon bee ~4.95 ~1 ~4.95 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee"],Rotation:[135.0f,0.0f]}
+execute at @a[tag=Boss_Fighting] run summon bee ~7 ~1 ~ {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee"],Rotation:[90.0f,0.0f]}
+execute at @a[tag=Boss_Fighting] run summon bee ~4.95 ~1 ~-4.95 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee"],Rotation:[45.0f,0.0f]}
+execute at @a[tag=Boss_Fighting] run summon bee ~ ~1 ~-7 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee"],Rotation:[0.0f,0.0f]}
+execute at @a[tag=Boss_Fighting] run summon bee ~-4.95 ~1 ~-4.95 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee"],Rotation:[-45.0f,0.0f]}
+execute at @a[tag=Boss_Fighting] run summon bee ~-7 ~1 ~ {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee"],Rotation:[-90.0f,0.0f]}
+execute at @a[tag=Boss_Fighting] run summon bee ~-4.95 ~1 ~4.95 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee"],Rotation:[-135.0f,0.0f]}
 
 
 # 出した後にダメージ判定functionに入りながら一定のageなら発射みたいな感じやなー
@@ -45,4 +45,4 @@ summon bee ~-4.95 ~1 ~4.95 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee"],Rotation:[
 
 # age20とかで発射でもいいけどな
 
-execute as @e[type=bee,tag=1_15_bee] at @s run tp ^ ^ ^1
+schedule function time_limit:boss/newstar_king/skill/time_realization/version/1.15/condition_check 1t
