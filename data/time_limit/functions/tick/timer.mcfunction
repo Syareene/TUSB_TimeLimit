@@ -1,5 +1,8 @@
 #> time_limit:tick/timer
 
+# 多分減らす前に取得しておけば1tick前の時間が取れる
+execute if score Time Timer matches 1.. if score Start Game matches 1 run scoreboard players operation BeforeTime Timer = Time Timer
+
 # tickごとにtimerを減らす
 execute if score Time Timer matches 1.. if score Start Game matches 1 run scoreboard players remove Time Timer 1
 # tickごとに経過時間を増やす

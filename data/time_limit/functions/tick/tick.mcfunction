@@ -11,24 +11,30 @@ execute if score Cloak Changed_Form matches 1.. if score Start Game matches 1 if
 function time_limit:tick/timer
 
 # ランダムなmobに盾を持たせる
-# enemyだけにしたいが、、、
 
 # まず盾判定してないmobを探索し、その後にenemyタグがあったら盾を確立で付与
 # enemyタグonlyのほうがいい説はある(1tick後じゃないとうまく実行されない可能性がある)
 execute as @e[type=#tusb_remake:mob,tag=!ShieldTried,limit=1] run function time_limit:tick/detect_enemy
 
-
 # ボスバー色チェン
-function time_limit:tick/bossbar_color
+function time_limit:tick/bossbar/bossbar_colorcalc
 
 # ボスバーの名前変えます
-function time_limit:tick/bossbar_name_change
+function time_limit:tick/bossbar/bossbar_name_change
 
 # 発光させます
 function time_limit:tick/glowing_player
 
 # クエスト用スコア検知
 function time_limit:tick/quest_advancement
+
+# テスト用
+# 死んでもなお検知するのかどうか
+# inが必須
+
+# 死ぬ前はおばわでも出てなかったのに死んだ後はずっとhiいってる、、、なんでや
+# execute as @a in the_nether if predicate time_limit:boss run say hi
+
 
 # ボス処理
 function time_limit:tick/boss_tick
