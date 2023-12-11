@@ -72,6 +72,9 @@ scoreboard players set Time_Shield Option 1
 scoreboard players set Clock_Island Option 1
 scoreboard players set Enhance_Boss Option 1
 
+# 死亡検知用スコア
+scoreboard objectives add DeathCount deathCount
+
 # 時計島仕様変更用検知スコア
 scoreboard objectives add Changed_Form dummy
 
