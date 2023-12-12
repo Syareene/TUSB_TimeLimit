@@ -21,3 +21,5 @@ execute as @a[distance=..1,tag=Boss_Fighting] run function score_damage:api/atta
 execute as @a[distance=..1,tag=Boss_Fighting] run effect give @s blindness 3 0
 execute as @a[distance=..1,tag=Boss_Fighting] run effect give @s darkness 3 0
 execute as @a[distance=..1,tag=Boss_Fighting] run effect give @s slowness 3 1
+
+execute at @e[type=marker,tag=Blackhole] run function time_limit:boss/newstar_king/skill/summon_blackhole/particle/
