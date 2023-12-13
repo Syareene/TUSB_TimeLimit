@@ -70,20 +70,24 @@
         scoreboard players operation $Damage ScoreDamageCore *= $CalcE ScoreDamageCore
         scoreboard players set _ ScoreDamageCore 100
         scoreboard players operation $Damage ScoreDamageCore /= _ ScoreDamageCore
+#tellraw @a[tag=Debug] [{"text":"耐性計算前$Damage： "},{"score":{"name":"$Damage","objective":"ScoreDamageCore"},"color": "#00ff00"}]
 # 耐性エフェクトによる軽減計算部
     # $Resistance *= min(5, $Resistance) * 10 / 5
         scoreboard players set _ ScoreDamageCore 5
         scoreboard players operation $Resistance ScoreDamageCore < _ ScoreDamageCore
         scoreboard players set _ ScoreDamageCore 2
         scoreboard players operation $Resistance ScoreDamageCore *= _ ScoreDamageCore
+#tellraw @a[tag=Debug] [{"text":"耐性計算中$Resistance： "},{"score":{"name":"$Resistance","objective":"ScoreDamageCore"},"color": "#0080ff"}]
     # $CalcF = 1 * 10 - $Resistance( * 10)
         scoreboard players set _ ScoreDamageCore 10
         scoreboard players operation $CalcF ScoreDamageCore = _ ScoreDamageCore
         scoreboard players operation $CalcF ScoreDamageCore -= $Resistance ScoreDamageCore
+#tellraw @a[tag=Debug] [{"text":"耐性計算中$CalcF： "},{"score":{"name":"$CalcF","objective":"ScoreDamageCore"},"color": "#ff8000"}]
     # $damage = $damage( * 100 * 100) * $CalcF( * 10) / 10
         scoreboard players operation $Damage ScoreDamageCore *= $CalcF ScoreDamageCore
         scoreboard players set _ ScoreDamageCore 10
         scoreboard players operation $Damage ScoreDamageCore /= _ ScoreDamageCore
+#tellraw @a[tag=Debug] [{"text":"耐性計算後$Damage： "},{"score":{"name":"$Damage","objective":"ScoreDamageCore"},"color": "#FF2A2A"}]
 # Reset
     scoreboard players reset $CalcA ScoreDamageCore
     scoreboard players reset $CalcB ScoreDamageCore
