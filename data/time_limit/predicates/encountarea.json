@@ -1,5 +1,5 @@
 {
-    "condition": "any_of",
+    "condition": "minecraft:alternative",
     "terms": [
       {
         "condition": "minecraft:reference",
