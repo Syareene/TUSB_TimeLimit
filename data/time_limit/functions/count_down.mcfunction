@@ -1,4 +1,4 @@
-#> time_limit:cound_down
+#> time_limit:count_down
 # おわりだ
 
 # ..10なら時間を表示する
