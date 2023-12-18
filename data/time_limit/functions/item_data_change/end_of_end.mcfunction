@@ -1,4 +1,4 @@
-#> time_limit:canncel_netherite/end_of_end
+#> time_limit:item_data_change/end_of_end
 
 # エンドオブエンドのネザライト化を許しません
 # ネザライトからダイヤに戻す
