@@ -30,6 +30,10 @@ TUSB v12Remakeの非公式二次創作。
 `/scoreboard players set Start Game 2`を実行するとタイマーが一時的に停止します。  
 再度動かしたい場合は、`/scoreboard players set Start Game 1`を実行してください。  
 
+## 設定について
+`/function time_limit:settings/`を実行することで難易度や詳細な設定を変更することができます。  
+この設定はタイマーが始まる前にのみ設定できることに注意してください。  
+
 ## ライセンス
 このリポジトリ及びdatapackはMITライセンスが適応されます。  
 
