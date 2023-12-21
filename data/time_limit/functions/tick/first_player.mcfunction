@@ -4,9 +4,13 @@
 # tag付与
 tag @s add Joined
 # チュートリアル進捗give
-advancement grant @s from time_limit:tutorial/start
+# advancement grant @s from time_limit:tutorial/start
 # クエストライン最初の進捗
-advancement grant @s only time_limit:time_limit_mission/root
+# advancement grant @s only time_limit:time_limit_mission/root
+
+# msg
+function time_limit:load/tutorial_msg
+
 # bossbar表示
 bossbar set time_limit:timer players @s
 # ボスいるときはボスバー隠すからこの処理が効いてくる

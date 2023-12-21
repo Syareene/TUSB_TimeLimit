@@ -20,7 +20,7 @@ data modify storage tusb_remake: clock_stage set value 2
 # 演出
 worldborder warning distance 20000
 execute in minecraft:overworld run schedule function tusb_remake:gimmic/clock/half_tick 10t
-# msg(一旦これ、いいのあったら変えたいです)
+# msg
 tellraw @a [{"text":"時の流れがおかしくなった気がする！","bold": false,"color": "#FF2A2A"}]
 tellraw @a [{"text":"すぐに時の乱れを止めないと...！","bold": false,"color": "#FF2A2A"}]
 

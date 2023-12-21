@@ -4,6 +4,10 @@
 # scoreboard作成
 function time_limit:load/scoreboard_make
 
+# スキル説明変更
+# TLEは一部スキルに調節がはいっているため
+function time_limit:load/change_description
+
 # forceload
 # same tickだとforceload無視されてそうなのでonoff関わらず先に
 # 王スポナー
@@ -13,6 +17,8 @@ execute in the_end run forceload add -1388 9 -1388 9
 execute in the_end run forceload add 454 454 545 545
 # 超作業台
 execute in overworld run forceload add -2727 -374 -2721 -372
+# わこからさんの場所をforceload
+forceload add -2800 -360 -2800 -360
 
 # エンドボス色々用アマスタ
 # ここだけは設定の有無に関わらず設置する
@@ -20,9 +26,13 @@ execute in the_end run kill @e[type=armor_stand,tag=Boss_Marker]
 execute in the_end run summon armor_stand 500.0 100 500.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,Small:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,Tags:["Boss_Marker"],DisabledSlots:4144959}
 
 # ロゴをplace
-place template time_limit:boss_field/tle_logo_downleft -1995 74 -145
-place template time_limit:boss_field/tle_logo_downright -1995 74 -193
+place template time_limit:cloudia/tle_logo_downleft -1995 74 -145
+place template time_limit:cloudia/tle_logo_downright -1995 74 -193
 # チュートリアル建築書き換え
+# これすでにあるもの書き換えてるから看板とか花/種などのアイテムもkillしないといけないだろうねぇー今までと違って
+
+place template time_limit:cloudia/tusb_tutorial_right -1913 109 -211
+place template time_limit:cloudia/tusb_tutorial_left -1913 109 -96
 
 
 # 通常世界スポーン位置の真下にアイテムを置く
@@ -48,17 +58,6 @@ bossbar set time_limit:timer style notched_10
 
 # 発光用team(デフォルトで使ってるチームの色を変える)
 team modify FriendlyTeam color red
-
-# レコード取引の追加
-# uuidそのまま指定でいい気はする
-
-# pigstep
-data modify entity 60fd38a5-46a3-4318-b0a1-c279a55eae08 Offers.Recipes insert 12 value {xp: 1, buy: {id: "minecraft:music_disc_pigstep", Count: 1b}, sell: {id: "minecraft:porkchop", Count: 8b}, uses: 0, priceMultiplier: 0.0f, maxUses: 2147483647, rewardExp: 0b, demand: 0, specialPrice: 0, buyB: {id: "minecraft:air", Count: 65b}}
-# otherside
-data modify entity 60fd38a5-46a3-4318-b0a1-c279a55eae08 Offers.Recipes insert 13 value {xp: 1, buy: {id: "minecraft:music_disc_otherside", Count: 1b}, sell: {id: "minecraft:bell", Count: 1b}, uses: 0, priceMultiplier: 0.0f, maxUses: 2147483647, rewardExp: 0b, demand: 0, specialPrice: 0, buyB: {id: "minecraft:air", Count: 65b}}
-# 5
-data modify entity 60fd38a5-46a3-4318-b0a1-c279a55eae08 Offers.Recipes insert 14 value {xp: 1, buy: {id: "minecraft:music_disc_5", Count: 1b}, sell: {id: "minecraft:nether_star", Count: 32b}, uses: 0, priceMultiplier: 0.0f, maxUses: 2147483647, rewardExp: 0b, demand: 0, specialPrice: 0, buyB: {id: "minecraft:air", Count: 65b}}
-
 
 # 時送りの盾初期データset
 # player_item_tunner使うんで必要な量だけでいいです

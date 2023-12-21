@@ -1,4 +1,4 @@
-#> time_limit:canncel_netherite/no_god
+#> time_limit:item_data_change/end_of_end
 
 # 全能ノーのネザライト化を許しません
 # ネザライトからダイヤに戻す

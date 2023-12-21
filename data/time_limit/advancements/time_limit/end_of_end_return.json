@@ -28,6 +28,6 @@
         }
     },
     "rewards": {
-        "function": "time_limit:canncel_netherite/end_of_end"
+        "function": "time_limit:item_data_change/end_of_end"
     }
 }
