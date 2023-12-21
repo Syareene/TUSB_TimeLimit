@@ -28,6 +28,9 @@ function time_limit:tick/glowing_player
 # クエスト用スコア検知
 function time_limit:tick/quest_advancement
 
+# プレイヤー用tick (すでにあったらそっちに移動しておいてください)
+execute as @a at @s run function time_limit:tick/player_tick
+
 # テスト用
 # 死んでもなお検知するのかどうか
 # inが必須
