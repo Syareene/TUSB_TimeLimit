@@ -16,7 +16,7 @@
 # 眷属はあり、ただ序盤がなー
 # ステータスを攻略度合いで変えてもいいのかもしれんね
 #> 検証用サウンド
-playsound entity.illusioner.prepare_mirror hostile @s ~ ~ ~ 1 1 0
+# playsound entity.illusioner.prepare_mirror hostile @s ~ ~ ~ 1 1 0
 
 
 

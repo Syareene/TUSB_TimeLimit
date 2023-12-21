@@ -48,6 +48,6 @@
         }
     },
     "rewards": {
-        "function": "time_limit:canncel_netherite/no_god"
+        "function": "time_limit:item_data_change/end_of_end"
     }
 }

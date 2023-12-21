@@ -13,5 +13,5 @@ function #math:dice
 # 乱数結果を代入する
 execute store result score _ TUSB run data get storage math: out.sum
 
-# 1なら盾持たせる
-execute if score _ TUSB matches 1 run function time_limit:tick/replace_shield
+# 1,2なら盾持たせる
+execute if score _ TUSB matches 1..2 run function time_limit:tick/replace_shield
