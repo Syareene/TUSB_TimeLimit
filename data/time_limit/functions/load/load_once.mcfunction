@@ -17,8 +17,11 @@ execute in the_end run forceload add -1388 9 -1388 9
 execute in the_end run forceload add 454 454 545 545
 # 超作業台
 execute in overworld run forceload add -2727 -374 -2721 -372
+# 職業島
+execute in overworld run forceload add -52 17 -52 17
+
 # わこからさんの場所をforceload
-forceload add -2800 -360 -2800 -360
+execute in overworld run forceload add -2800 -360 -2800 -360
 
 # エンドボス色々用アマスタ
 # ここだけは設定の有無に関わらず設置する

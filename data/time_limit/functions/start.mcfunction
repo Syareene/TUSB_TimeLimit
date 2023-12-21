@@ -17,5 +17,6 @@ execute if score Enhance_Boss Option matches 1 run execute in the_end at @e[type
 # forceload削除
 # タイミングずらさないと多分生成されん
 execute in the_end run forceload remove 454 454 545 545
+execute in overworld run forceload remove -52 17 -52 17
 execute in overworld run forceload remove -2727 -374 -2721 -372
-execute in overworld run forceload add -2800 -360 -2800 -360
+execute in overworld run forceload remove -2800 -360 -2800 -360
