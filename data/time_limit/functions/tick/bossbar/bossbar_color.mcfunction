@@ -7,4 +7,4 @@ execute if score Time Timer matches ..3600 run bossbar set time_limit:timer colo
 
 # 時計島ギミックのときは強制的に色を変化する
 # (色は仮置き)
-execute if score Cloak Changed_Form matches 1.. run bossbar set time_limit:timer color blue
+execute if score Cloak Changed_Form matches 1.. run bossbar set time_limit:timer color purple
