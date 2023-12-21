@@ -4,6 +4,10 @@
 # scoreboard作成
 function time_limit:load/scoreboard_make
 
+# スキル説明変更
+# TLEは一部スキルに調節がはいっているため
+function time_limit:load/change_description
+
 # forceload
 # same tickだとforceload無視されてそうなのでonoff関わらず先に
 # 王スポナー
