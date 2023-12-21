@@ -18,7 +18,7 @@ execute if score $percent_10 Boss_x matches 7 run function time_limit:boss/newst
 execute if score $percent_10 Boss_x matches 6 run function time_limit:boss/newstar_king/skill/time_realization/version/1_13
 # 1.14(強化襲撃) 5~6割
 execute if score $percent_10 Boss_x matches 5 run function time_limit:boss/newstar_king/skill/time_realization/version/1.14/
-# 1.15(ブンブンハチ) 4~5割
+# 1.15(ハチミサイル) 4~5割
 execute if score $percent_10 Boss_x matches 4 run function time_limit:boss/newstar_king/skill/time_realization/version/1_15
 # 1.16(強化ピグリン) 3~4割
 execute if score $percent_10 Boss_x matches 3 run function time_limit:boss/newstar_king/skill/time_realization/version/1_16
