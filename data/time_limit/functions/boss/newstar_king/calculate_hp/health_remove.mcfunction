@@ -8,9 +8,8 @@
 # 1024(mobの体力最大値) - 現在のボスの体力 = 与えたダメージ
 scoreboard players operation $Default_Health Boss_Health -= $Current_Health Boss_Health
 # 与えたダメージを5倍にする(prt20がついているため)
-# サンボル系統の魔法は耐性エフェを無視してる(使用APIの仕様なのかよくわからん)からエンチャだけで判断する、ワンパンされたら知らん。
-# ここにきてエンチャlv255限界の恩恵を受けているという謎
-# ちなTypeCheckedをつけたら島攻略エフェクト付与を無視できる
+scoreboard players operation $Default_Health Boss_Health *= $5 Boss_x
+# 耐性エフェクト分をさらに掛けます。
 scoreboard players operation $Default_Health Boss_Health *= $5 Boss_x
 # 与えたダメージをboss_healthから引きます
 scoreboard players operation Health Boss_Health -= $Default_Health Boss_Health
