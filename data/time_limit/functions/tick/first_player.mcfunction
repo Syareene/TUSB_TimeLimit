@@ -8,6 +8,12 @@ tag @s add Joined
 # クエストライン最初の進捗
 # advancement grant @s only time_limit:time_limit_mission/root
 
+# スコアの設定
+# これを設定してあげないとjoin時にmsgがいっぱい出ちゃう
+scoreboard players set @s ChangeSkillSet 0
+scoreboard players set @s SkillSetting 0
+
+
 # msg
 function time_limit:load/tutorial_msg
 
