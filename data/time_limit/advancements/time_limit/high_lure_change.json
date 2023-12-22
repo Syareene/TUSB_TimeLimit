@@ -17,6 +17,6 @@
         }
     },
     "rewards": {
-        "function": "minecraft:a"
+        "function": "time_limit:item_data_change/high_lure_change"
     }
 }
