@@ -40,6 +40,7 @@ execute as @e[type=bee,tag=1_15_bee] run scoreboard players reset @s TUSB
 # execute as @e[type=bee,tag=1_15_bee] at @s positioned ~-0.25 ~ ~-0.25 if entity @e[type=player,dx=1,dz=1] run execute positioned ~0.25 ~ ~0.25 as @e[type=player,dx=-1,dz=-1] run function time_limit:boss/newstar_king/skill/time_realization/version/1.15/damage
 # これで検知できてるわ
 
+execute as @e[type=bee,tag=1_15_bee] at @s as @a[distance=..1] run function time_limit:boss/newstar_king/skill/time_realization/version/1.15/damage
 
 # 後は当たったらハチのキル
 
