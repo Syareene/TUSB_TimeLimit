@@ -20,4 +20,4 @@ execute at @e[type=marker,tag=acceralation] run function time_limit:boss/newstar
 # 上のやつちょっとの猶予時間の後にどーんってやってもいいよなぁ
 # 起点マーカーだしてschedule,その後範囲指定してkillかねー
 
-schedule function time_limit:boss/newstar_king/skill/acceralation/damage 10t
+schedule function time_limit:boss/newstar_king/skill/acceralation/detect 10t
