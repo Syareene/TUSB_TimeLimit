@@ -33,8 +33,13 @@ execute unless data storage time_limit:storage mob_data.id run data modify entit
 
 # ドロップチャンスを0に
 
-# これpathが違いますね
-execute unless data storage time_limit:storage mob_data.DropChances run data modify entity @s HandDropChances[1] set value "0.0f"
+# デフォが0.085だから1000倍で取ればいいかなー
+execute store result score @s TUSB run data get storage time_limit:storage mob_data.DropChances 1000
+
+execute if score @s TUSB matches 85 run data modify entity @s HandDropChances[1] set value 0.0f
+# リセット
+scoreboard players reset @s TUSB
+
 
 # もしデータが有るならすでにある分のデータを考慮した上でattributeを強化する
 execute if data storage time_limit:storage mob_data.id run function time_limit:tick/modify_offhand_data
