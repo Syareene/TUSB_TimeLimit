@@ -107,7 +107,7 @@ scoreboard objectives add Boss_Health dummy
 # mobの最大体力の100倍スコア
 scoreboard players set $Default_Health Boss_Health 102400
 # 先にhealthを仮置きしておかないとバグりそうで怖いので入れておく
-scoreboard players set Health Boss_Health 2048000
+scoreboard players set Health Boss_Health 3072000
 
 # ボス系統倍率用スコア
 scoreboard objectives add Boss_x dummy
@@ -115,6 +115,6 @@ scoreboard players set $percent_10 Boss_x 10
 scoreboard players set $5 Boss_x 5
 scoreboard players set $20 Boss_x 20
 scoreboard players set $25 Boss_x 25
-scoreboard players set $20480 Boss_x 20480
+scoreboard players set $30720 Boss_x 30720
 scoreboard players set $100 Boss_x 100
 scoreboard players set $10 Boss_x 10

@@ -27,15 +27,19 @@ kill @e[type=item,nbt={Item:{id:"minecraft:structure_void",tag:{Boss:1b}}}]
 # +で盾attributeによる補正をかけたい
 # 難易度で補正割合変えるか、、？
 
+# 複数回すぽーんしてもいいように最初にベースの体力を設定しておく
+scoreboard players set $30720 Boss_x 30720
+
+# 計算部
 execute store result score People Boss_x run execute if entity @a[gamemode=!spectator]
 scoreboard players remove People Boss_x 1
 scoreboard players operation People Boss_x *= $20 Boss_x
 scoreboard players add People Boss_x 100
-scoreboard players operation $20480 Boss_x *= People Boss_x
+scoreboard players operation $30720 Boss_x *= People Boss_x
 # ここでマルチ倍率を込みしたHP倍率が決定するので最終的に代入
-execute store result score Health Boss_Health run scoreboard players get $20480 Boss_x
+execute store result score Health Boss_Health run scoreboard players get $30720 Boss_x
 # max healthも
-scoreboard players operation Max Boss_Health = $20480 Boss_x
+scoreboard players operation Max Boss_Health = $30720 Boss_x
 
 # 割合取得用に最大HPの1割を取得
 # tempに最大ヘルス代入
@@ -68,5 +72,5 @@ title @a title {"text":"§4§k|§c§k|§4§k|§d§k|§4§k|§r §5§l深淵ノ�
 title @a subtitle {"text":"§4§ka§c§kb§4§ky§d§ks§4§ks§r～時を司りしもの達～§1§ks§9§kt§1§ka§b§kr§1§ks§r","color":"dark_red","bold":true}
 # debug用というより複数回すぽーんするならこういう処理しないとだめかも
 #scoreboard players set $25 Boss_x 25
-#scoreboard players set $20480 Boss_x 20480
+#scoreboard players set $30720 Boss_x 30720
 #scoreboard players set $percent_10 Boss_x 10
