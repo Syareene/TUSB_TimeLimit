@@ -24,6 +24,9 @@ kill @e[type=item,nbt={Item:{id:"minecraft:structure_void",tag:{Boss:1b}}}]
 # spawnした時に鯖にいるgamemode spectater以外の人数分補正をかける
 # 計算式:2048*(100+20*人数-1)
 
+# +で盾attributeによる補正をかけたい
+# 難易度で補正割合変えるか、、？
+
 execute store result score People Boss_x run execute if entity @a[gamemode=!spectator]
 scoreboard players remove People Boss_x 1
 scoreboard players operation People Boss_x *= $20 Boss_x
