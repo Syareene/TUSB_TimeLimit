@@ -20,6 +20,5 @@
     execute unless score $EPF ScoreDamageCore matches 0.. run function score_damage:core/get_default_epf/
 # 耐性エフェクト
     execute if data storage score_damage: Argument{BypassResistance:0b} store result score $Resistance ScoreDamageCore run data get entity @s ActiveEffects[{Id:11}].Amplifier
-    #tellraw @a[tag=Debug] [{"text":"耐性取得後$Resistance： "},{"score":{"name":"$Resistance","objective":"ScoreDamageCore"},"color": "#ff00ff"}]
     execute if data storage score_damage: Argument{BypassResistance:0b} if data entity @s ActiveEffects[{Id:11}] run scoreboard players add $Resistance ScoreDamageCore 1
     execute if data storage score_damage: Argument{BypassResistance:1b} run scoreboard players set $Resistance ScoreDamageCore 0

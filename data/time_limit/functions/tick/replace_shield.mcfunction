@@ -12,6 +12,7 @@ data modify storage time_limit:storage mob_data set value {}
 # データを取ってくる
 data modify storage time_limit:storage mob_data.id set from entity @s HandItems[1].id
 data modify storage time_limit:storage mob_data.tag set from entity @s HandItems[1].tag
+data modify storage time_limit:storage mob_data.DropChances set from entity @s HandDropChances[1]
 
 # もしなにもないなら時送りの盾を持たせる
 # これ別にオフハンドに持たせるからエンチャント適応されてる状態でもいいっちゃいいなぁ、、、
@@ -31,7 +32,14 @@ execute unless data storage time_limit:storage mob_data.id run data modify entit
 execute unless data storage time_limit:storage mob_data.id run data modify entity @s HandItems[1].tag.AttributeModifiers set from storage time_limit:storage shield_data.tag.AttributeModifiers
 
 # ドロップチャンスを0に
-execute unless data storage time_limit:storage mob_data.id run data modify entity @s HandDropChances[1] set value "0.0f"
+
+# デフォが0.085だから1000倍で取ればいいかなー
+execute store result score @s TUSB run data get storage time_limit:storage mob_data.DropChances 1000
+
+execute if score @s TUSB matches 85 run data modify entity @s HandDropChances[1] set value 0.0f
+# リセット
+scoreboard players reset @s TUSB
+
 
 # もしデータが有るならすでにある分のデータを考慮した上でattributeを強化する
 execute if data storage time_limit:storage mob_data.id run function time_limit:tick/modify_offhand_data

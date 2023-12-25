@@ -20,3 +20,4 @@ execute in the_end run forceload remove 454 454 545 545
 execute in overworld run forceload remove -52 17 -52 17
 execute in overworld run forceload remove -2727 -374 -2721 -372
 execute in overworld run forceload remove -2800 -360 -2800 -360
+execute in overworld run forceload remove 2 2 2 2

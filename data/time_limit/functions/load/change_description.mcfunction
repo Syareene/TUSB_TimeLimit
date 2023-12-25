@@ -16,6 +16,16 @@ data modify storage tusb_remake: skill_table.archer.25.description set value [["
 # フェイタルショット
 data modify storage tusb_remake: skill_table.archer.26.description set value [["矢を放つ"]]
 
+# トラップ効果時間短縮
+
+# ルカナン
+data modify storage tusb_remake: skill_table.archer.0.duration set value [15]
+data modify storage tusb_remake: skill_table.archer.0.range set value [3]
+# ボミオス
+data modify storage tusb_remake: skill_table.archer.2.duration set value [15]
+# ニフラム
+data modify storage tusb_remake: skill_table.archer.2.duration set value [15]
+
 # 白魔道士
 
 # ホーリー

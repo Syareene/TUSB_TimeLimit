@@ -16,10 +16,14 @@ execute as @e[type=armor_stand,tag=rollback_trap] if entity @s at @s run functio
 # 深淵王が即死経過なんかで先に死んでしまった場合
 
 # スコアのHPが0なら新星キル処理(深淵王はキルされてないなら)
-execute if score Health Boss_Health matches ..0 if entity @e[type=zombie,tag=Abyss_King,nbt={Invulnerable:1b}] run function time_limit:boss/newstar_king/boss_kill
-# ロスト系とかワンパンされた時の処理はどうするべ、、、
+execute if score Health Boss_Health matches ..0 if score Flag FightingBoss matches 1 if entity @e[type=zombie,tag=Abyss_King,nbt={Invulnerable:1b}] run function time_limit:boss/newstar_king/boss_kill
 # スコア上の体力は1以上あって且つ戦ってるプレイヤーがいてnewstarkingがいないなら実行(ワンパンされた時の対処みたいなもん)
-execute if score Health Boss_Health matches 1.. if entity @e[type=zombie,tag=Abyss_King,nbt={Invulnerable:1b}] unless entity @e[type=zombie,tag=NewStar_King] run function time_limit:boss/newstar_king/boss_kill
+execute if score Health Boss_Health matches 1.. if score Flag FightingBoss matches 1 if entity @e[type=zombie,tag=Abyss_King,nbt={Invulnerable:1b}] unless entity @e[type=zombie,tag=NewStar_King] run function time_limit:boss/newstar_king/boss_kill
+
+# これ深淵がロストで死んだときに取り返せなくね
+# まあ一旦アイテムを消すからいいか
+
+
 # 死んだ後毎tick実行されてるから見えてないよーん
 # invvついてるときだけにしなさい
 # 王が先にキルされたらだるくね？ｗ
@@ -38,10 +42,15 @@ execute in the_end as @e[type=item,nbt={Item:{id:"minecraft:structure_void",tag:
 # ボス戦闘tag剥奪
 # そもそもasがディメンション全体を探索するから意味がないので上の方は意味がない
 # execute in overworld as @a[tag=Boss_Fighting] if entity @s run tag @s remove Boss_Fighting
+# ここpredicateにすれば=!でendできるくね
 execute as @a[tag=Boss_Fighting,nbt={Dimension:"minecraft:overworld"}] run tag @s remove Boss_Fighting
+
+# ボス戦闘スコアがあるのにタグ付きが中にいなかったら
+
+execute if score Flag FightingBoss matches 1 as @e[type=armor_stand,tag=Boss_Enter] at @s unless entity @a[distance=45.25..,tag=Boss_Fighting] run function time_limit:boss/newstar_king/no_player
 
 # ボス無敵ならparticle
 execute in the_end as @e[type=zombie,tag=NewStar_King,nbt={Invulnerable:true}] if entity @s at @s run particle minecraft:lava ~ ~1 ~ 0.5 0.5 0.5 1 10 normal @a
 
 # 深淵ノ王 killされたら
-execute in the_end if entity @e[type=item,nbt={Item:{id:"minecraft:debug_stick",tag:{Shinen:1b}}}] run function time_limit:boss/newstar_king/all_killed
+execute if score Flag FightingBoss matches 1 in the_end if entity @e[type=item,nbt={Item:{id:"minecraft:debug_stick",tag:{Shinen:1b}}}] run function time_limit:boss/newstar_king/all_killed
