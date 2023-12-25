@@ -8,5 +8,5 @@
 stopsound @a[distance=..16] hostile minecraft:block.portal.travel
 playsound minecraft:block.portal.travel hostile @a[distance=..16] ~ ~ ~ 0.35 0
 
-effect give @a[distance=..16] darkness 5 127 true
-effect give @a[distance=..16] blindness 5 127 true
+effect give @a[distance=..16] darkness 10 127 true
+effect give @a[distance=..16] blindness 10 127 true

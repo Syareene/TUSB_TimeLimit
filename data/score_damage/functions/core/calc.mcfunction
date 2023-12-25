@@ -21,20 +21,15 @@
 # 防御による軽減計算部
     # $CalcA = $DefensePoints( * 100) * 100 / 5 / 100;
         scoreboard players operation $CalcA ScoreDamageCore = $DefensePoints ScoreDamageCore
-        scoreboard players set _ ScoreDamageCore 20
-        scoreboard players operation $CalcA ScoreDamageCore *= _ ScoreDamageCore
-        scoreboard players set _ ScoreDamageCore 100
-        scoreboard players operation $CalcA ScoreDamageCore /= _ ScoreDamageCore
+        scoreboard players operation $CalcA ScoreDamageCore *= $20 ScoreDamageCore
+        scoreboard players operation $CalcA ScoreDamageCore /= $100 ScoreDamageCore
     # $CalcB.3 = $Toughness( * 100) * 100 / 4 + 2 * 100 * 100;
         scoreboard players operation $CalcB.3 ScoreDamageCore = $Toughness ScoreDamageCore
-        scoreboard players set _ ScoreDamageCore 25
-        scoreboard players operation $CalcB.3 ScoreDamageCore *= _ ScoreDamageCore
-        scoreboard players set _ ScoreDamageCore 20000
-        scoreboard players operation $CalcB.3 ScoreDamageCore += _ ScoreDamageCore
+        scoreboard players operation $CalcB.3 ScoreDamageCore *= $25 ScoreDamageCore
+        scoreboard players operation $CalcB.3 ScoreDamageCore += $20000 ScoreDamageCore
     # $CalcB.2 = $damage( * 100) * 100 * 100 / $CalcB.3( * 100 * 100);
         scoreboard players operation $CalcB.2 ScoreDamageCore = $Damage ScoreDamageCore
-        scoreboard players set _ ScoreDamageCore 10000
-        scoreboard players operation $CalcB.2 ScoreDamageCore *= _ ScoreDamageCore
+        scoreboard players operation $CalcB.2 ScoreDamageCore *= $10000 ScoreDamageCore
         scoreboard players operation $CalcB.2 ScoreDamageCore /= $CalcB.3 ScoreDamageCore
     # $CalcB = $DefensePoints( * 100) - $CalcB.2( * 100);
         scoreboard players operation $CalcB ScoreDamageCore = $DefensePoints ScoreDamageCore
@@ -42,52 +37,35 @@
     # $CalcC = min(max($CalcA( * 100), $CalcB( * 100)), 20 * 100) * 100 / 25;
         scoreboard players operation $CalcC ScoreDamageCore = $CalcA ScoreDamageCore
         scoreboard players operation $CalcC ScoreDamageCore > $CalcB ScoreDamageCore
-        scoreboard players set _ ScoreDamageCore 2000
-        scoreboard players operation $CalcC ScoreDamageCore < _ ScoreDamageCore
-        scoreboard players set _ ScoreDamageCore 4
-        scoreboard players operation $CalcC ScoreDamageCore *= _ ScoreDamageCore
+        scoreboard players operation $CalcC ScoreDamageCore < $2000 ScoreDamageCore
+        scoreboard players operation $CalcC ScoreDamageCore *= $4 ScoreDamageCore
     # $CalcD = (1 * 100 * 100 - $CalcC( * 100 * 100)) / 10;
-        scoreboard players set _ ScoreDamageCore 10000
-        scoreboard players operation $CalcD ScoreDamageCore = _ ScoreDamageCore
+        scoreboard players operation $CalcD ScoreDamageCore = $10000 ScoreDamageCore
         scoreboard players operation $CalcD ScoreDamageCore -= $CalcC ScoreDamageCore
-        scoreboard players set _ ScoreDamageCore 10
-        scoreboard players operation $CalcD ScoreDamageCore /= _ ScoreDamageCore
+        scoreboard players operation $CalcD ScoreDamageCore /= $10 ScoreDamageCore
     # $damage = $damage( * 100) * $CalcD( * 100 * 10) / 10;
         scoreboard players operation $Damage ScoreDamageCore *= $CalcD ScoreDamageCore
-        scoreboard players set _ ScoreDamageCore 10
-        scoreboard players operation $Damage ScoreDamageCore /= _ ScoreDamageCore
+        scoreboard players operation $Damage ScoreDamageCore /= $10 ScoreDamageCore
 # エンチャントによる軽減計算部
     # $EPF = min(20, $EPF) / 100 / 25
-        scoreboard players set _ ScoreDamageCore 20
-        scoreboard players operation $EPF ScoreDamageCore < _ ScoreDamageCore
-        scoreboard players set _ ScoreDamageCore 4
-        scoreboard players operation $EPF ScoreDamageCore *= _ ScoreDamageCore
+        scoreboard players operation $EPF ScoreDamageCore < $20 ScoreDamageCore
+        scoreboard players operation $EPF ScoreDamageCore *= $4 ScoreDamageCore
     # $CalcE = 1 * 100 - $EPF( * 100)
-        scoreboard players set _ ScoreDamageCore 100
-        scoreboard players operation $CalcE ScoreDamageCore = _ ScoreDamageCore
+        scoreboard players operation $CalcE ScoreDamageCore = $100 ScoreDamageCore
         scoreboard players operation $CalcE ScoreDamageCore -= $EPF ScoreDamageCore
     # $damage = $damage( * 100 * 100) * $CalcE( * 100) / 100
         scoreboard players operation $Damage ScoreDamageCore *= $CalcE ScoreDamageCore
-        scoreboard players set _ ScoreDamageCore 100
-        scoreboard players operation $Damage ScoreDamageCore /= _ ScoreDamageCore
-#tellraw @a[tag=Debug] [{"text":"耐性計算前$Damage： "},{"score":{"name":"$Damage","objective":"ScoreDamageCore"},"color": "#00ff00"}]
+        scoreboard players operation $Damage ScoreDamageCore /= $100 ScoreDamageCore
 # 耐性エフェクトによる軽減計算部
     # $Resistance *= min(5, $Resistance) * 10 / 5
-        scoreboard players set _ ScoreDamageCore 5
-        scoreboard players operation $Resistance ScoreDamageCore < _ ScoreDamageCore
-        scoreboard players set _ ScoreDamageCore 2
-        scoreboard players operation $Resistance ScoreDamageCore *= _ ScoreDamageCore
-#tellraw @a[tag=Debug] [{"text":"耐性計算中$Resistance： "},{"score":{"name":"$Resistance","objective":"ScoreDamageCore"},"color": "#0080ff"}]
+        scoreboard players operation $Resistance ScoreDamageCore < $5 ScoreDamageCore
+        scoreboard players operation $Resistance ScoreDamageCore *= $2 ScoreDamageCore
     # $CalcF = 1 * 10 - $Resistance( * 10)
-        scoreboard players set _ ScoreDamageCore 10
-        scoreboard players operation $CalcF ScoreDamageCore = _ ScoreDamageCore
+        scoreboard players operation $CalcF ScoreDamageCore = $10 ScoreDamageCore
         scoreboard players operation $CalcF ScoreDamageCore -= $Resistance ScoreDamageCore
-#tellraw @a[tag=Debug] [{"text":"耐性計算中$CalcF： "},{"score":{"name":"$CalcF","objective":"ScoreDamageCore"},"color": "#ff8000"}]
     # $damage = $damage( * 100 * 100) * $CalcF( * 10) / 10
         scoreboard players operation $Damage ScoreDamageCore *= $CalcF ScoreDamageCore
-        scoreboard players set _ ScoreDamageCore 10
-        scoreboard players operation $Damage ScoreDamageCore /= _ ScoreDamageCore
-#tellraw @a[tag=Debug] [{"text":"耐性計算後$Damage： "},{"score":{"name":"$Damage","objective":"ScoreDamageCore"},"color": "#FF2A2A"}]
+        scoreboard players operation $Damage ScoreDamageCore /= $10 ScoreDamageCore
 # Reset
     scoreboard players reset $CalcA ScoreDamageCore
     scoreboard players reset $CalcB ScoreDamageCore

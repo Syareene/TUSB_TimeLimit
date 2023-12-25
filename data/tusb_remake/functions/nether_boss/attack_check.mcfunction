@@ -11,15 +11,18 @@ execute as @e[tag=NetherBossSpawner] at @s unless block ~ ~ ~ minecraft:spawner 
 ## もしも黒スポナーがなかったらクリア！！
 execute unless entity @e[tag=NetherBossSpawner,name="§0⬛"] run data modify storage tusb_remake: nether_boss_clear set value true
 
-## ネザーボスのカウントを増やす
+## ネザーボスのカウントを増やすa
 ## 難易度によって攻撃間隔を変える
-execute store result storage tusb_remake: nether_boss_count int -1 run execute if score Difficulty Option matches 0..1 run data get storage tusb_remake: nether_boss_count -1.0000000001
-execute store result storage tusb_remake: nether_boss_count int -1 run execute if score Difficulty Option matches 2 run data get storage tusb_remake: nether_boss_count -2.0000000001
-execute store result storage tusb_remake: nether_boss_count int -1 run execute if score Difficulty Option matches 3 run data get storage tusb_remake: nether_boss_count -3.0000000001
-execute store result storage tusb_remake: nether_boss_count int -1 run execute if score Difficulty Option matches 4 run data get storage tusb_remake: nether_boss_count -4.0000000001
+#tellraw @a [{"text":"増加前カウント： "},{"storage":"tusb_remake:","nbt":"nether_boss_count","color": "#FF2A2A"}]
+execute if score Difficulty Option matches 0..3 run execute store result storage tusb_remake: nether_boss_count int -1 run data get storage tusb_remake: nether_boss_count -1.0000000001
+execute if score Difficulty Option matches 4 run execute store result storage tusb_remake: nether_boss_count int -1 run data get storage tusb_remake: nether_boss_count -3.0000000001
+#tellraw @a [{"text":"増加後カウント： "},{"storage":"tusb_remake:","nbt":"nether_boss_count","color": "#FF2A2A"}]
 ## カウントが44になっていたら、ドラゴンが吠える
-execute if data storage tusb_remake: {nether_boss_count:44} as 0-0-1-0-4 at @s positioned ~ ~-30 ~74 run playsound minecraft:entity.ender_dragon.growl master @a[distance=..80] ~ 0 ~ 0.1 0.7 1
+#execute if data storage tusb_remake: {nether_boss_count:44} as 0-0-1-0-4 at @s positioned ~ ~-30 ~74 run playsound minecraft:entity.ender_dragon.growl master @a[distance=..80] ~ 0 ~ 0.1 0.7 1
 ## カウントが46になっていたら、アタックチャーンス！
-execute if data storage tusb_remake: {nether_boss_count:46} run function tusb_remake:nether_boss/attack_chance
+execute store result score _ _ run data get storage tusb_remake: nether_boss_count 1
+execute if score Difficulty Option matches 0..3 run execute if score _ _ matches 46.. run function tusb_remake:nether_boss/attack_chance
+execute if score Difficulty Option matches 4 run execute if score _ _ matches 123.. run function tusb_remake:nether_boss/attack_chance
+#execute if data storage tusb_remake: {nether_boss_count:46} run function tusb_remake:nether_boss/attack_chance
 ## クリアしていたら、クリア演出！
 execute if data storage tusb_remake: {nether_boss_clear:true} run function tusb_remake:nether_boss/clear
