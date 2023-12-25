@@ -23,23 +23,15 @@ scoreboard objectives add Timer dummy
 scoreboard objectives add Sec dummy
 scoreboard objectives add Min dummy
 scoreboard objectives add Hour dummy
-#scoreboard objectives add Time_to_Sec dummy
-#scoreboard objectives add Time_to_Min dummy
-#scoreboard objectives add Time_to_Hour dummy
 # total time計測用スコア(主に時間経過で強くなる系に反映するため)
 # playtimeは実プレイヤーしか入らないのである！
 scoreboard objectives add Spend_Time dummy
 scoreboard objectives add Spend_Hour dummy
 scoreboard players set Time Spend_Hour 0
 # s,m,hをtickで割るときの値(scoreboard operation)
-#scoreboard players set $sec Time_to_Sec 20
-#scoreboard players set $min Time_to_Min 1200
-#scoreboard players set $hour Time_to_Hour 72000
-# 下のパターンに変えたほうがスコアボードの数少なくて良くない?みたいなことを言いたい
 scoreboard players set $Time_to_Sec Timer 20
 scoreboard players set $Time_to_Min Timer 1200
 scoreboard players set $Time_to_Hour Timer 72000
-#scoreboard objectives add Max_Time dummy
 # 設定項目確認用スコア
 scoreboard objectives add Option dummy
 # スタート判別用スコア
@@ -90,6 +82,10 @@ scoreboard objectives add Blackhole dummy
 # ボス初突入かどうか
 scoreboard objectives add Enter_Boss dummy
 scoreboard players set First Enter_Boss 0
+# ボス戦闘中かどうか
+scoreboard objectives add FightingBoss dummy
+scoreboard players set Flag FightingBoss 0
+
 # ボスHP代入用
 scoreboard objectives add Boss_Health dummy
 # mobの最大体力の100倍スコア
