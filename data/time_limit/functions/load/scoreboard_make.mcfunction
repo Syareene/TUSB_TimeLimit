@@ -15,8 +15,6 @@ scoreboard objectives add ChooseEvent dummy
 scoreboard objectives add UseCrossBow minecraft.used:minecraft.crossbow
 
 # 実績用スコア
-#scoreboard objectives add Fish_Count minecraft.custom:minecraft.fish_caught
-# こいつ本当に魚釣った時しか動かねぇｗ
 scoreboard objectives add ConquerIsland dummy
 
 # timer用スコアボード
@@ -43,10 +41,6 @@ scoreboard players set $Time_to_Min Timer 1200
 scoreboard players set $Time_to_Hour Timer 72000
 #scoreboard objectives add Max_Time dummy
 # 設定項目確認用スコア
-#scoreboard objectives add Difficulty dummy
-#scoreboard objectives add Time_Shield dummy
-#scoreboard objectives add Clock_Island dummy
-#scoreboard objectives add Boss dummy
 scoreboard objectives add Option dummy
 # スタート判別用スコア
 scoreboard objectives add Game dummy
@@ -58,16 +52,10 @@ scoreboard players set Start Game 0
 # 設定項目デフォルト値
 # normal true true true(diffが1,2,3で ez,normal,hard その他オプションが t/f 0,1)
 # normalのオプション値
-#scoreboard players set Mode Difficulty 2
 scoreboard players set Time Timer 72000
-#scoreboard players set Max Max_Time 72000
-
 scoreboard players set Difficulty Option 2
 scoreboard players set Max_Time Timer 72000
 # オプション全部有効化
-#scoreboard players set Shield_Enhance Time_Shield 1
-#scoreboard players set Fast_Time Cloak_Island 1
-#scoreboard players set Enhance_Boss Boss 1
 scoreboard players set Time_Shield Option 1
 scoreboard players set Clock_Island Option 1
 scoreboard players set Enhance_Boss Option 1
