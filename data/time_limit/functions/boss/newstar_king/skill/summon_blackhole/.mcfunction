@@ -15,7 +15,7 @@ me はサモン・ブラックホールを唱えた！
 # markerよんでparticleだして経過時間score出して、経過時間が立つまでmarker付近にいるプレイヤーを吸い込む
 # で、markerの周囲にいるプレイヤーに対してダメージとかエフェクトとかね
 # エフェクトは暗闇盲目鈍足かな
-summon marker ~ ~ ~ {Tags:["Blackhole"]}
+summon marker ~ ~ ~ {Tags:["Blackhole","BossEnemy"]}
 playsound block.end_portal.spawn block @a[distance=..100] ~ ~ ~ 1 1
 # loop join
 function time_limit:boss/newstar_king/skill/summon_blackhole/loop
