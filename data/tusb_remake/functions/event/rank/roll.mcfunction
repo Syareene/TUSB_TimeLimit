@@ -11,6 +11,8 @@ execute store result score @s EventRank run data get storage math: out.sum 0.999
 
 # TUSBデフォ or TLE追加どっちを選ぶかを決める
 
+# 一旦一部しか対応していないのでいい感じに調節する
+
 # data modify storage math: in set value [1,2]
 # function #math:dice
 # execute store result score @s ChooseEvent run data get storage math: out.sum 0.9999999999

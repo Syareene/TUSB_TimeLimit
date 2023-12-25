@@ -13,6 +13,8 @@ execute as @e[type=marker,tag=Blackhole] run tp @a[distance=..7,tag=Boss_Fightin
 # ダメージ与えます
 # ダメージset
 # 毎tickらしいっすお兄さん
+
+# insta killになっている
 data modify storage score_damage: Argument set value {Damage:2.00}
 # 実行
 execute as @a[distance=..1,tag=Boss_Fighting] run function score_damage:api/attack
