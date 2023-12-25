@@ -97,6 +97,8 @@ scoreboard objectives add Modifier_Amount dummy
 # mob attribute代入用スコア
 scoreboard objectives add MobAttribute dummy
 
+# ボス演出用スコア
+scoreboard objectives add MakeupTick dummy
 # ボススキル用スコア
 scoreboard objectives add Blackhole dummy
 # ボス初突入かどうか
