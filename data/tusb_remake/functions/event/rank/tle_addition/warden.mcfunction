@@ -4,4 +4,4 @@
 # そのままでも強いからいじらなくて良い
 
 me 「§5§l虚空から何かがうごめいている！？§r」
-summon warden ~ ~3 ~
+summon minecraft:warden ~ ~3 ~
