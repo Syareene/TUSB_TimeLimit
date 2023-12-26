@@ -3,7 +3,7 @@
 #> 新星様のスキル
 #
 #> 時計島タイマーを起動させ時を加速させる
-
+execute as @a at @s run playsound block.sculk_shrieker.shriek block @s ~ ~ ~ 1 1 1
 me は§4§lタイムアクセラレーション§rを唱えた！
 
 # タイマーセット
