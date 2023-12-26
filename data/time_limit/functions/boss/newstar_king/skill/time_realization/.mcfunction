@@ -13,11 +13,13 @@ execute if score $percent_10 Boss_x matches 9.. run function time_limit:boss/new
 # 1.11(エヴォーカーの牙攻撃)8~9割
 execute if score $percent_10 Boss_x matches 8 run function time_limit:boss/newstar_king/skill/time_realization/version/1_11
 # 1.12(色AEC) 7~8割
-execute if score $percent_10 Boss_x matches 7 run function time_limit:boss/newstar_king/skill/time_realization/version/1.12/
+execute if score $percent_10 Boss_x matches 7 run function time_limit:boss/newstar_king/skill/time_realization/version/1_12
 # 1.13(空飛ぶコンジット) 6~7割
 execute if score $percent_10 Boss_x matches 6 run function time_limit:boss/newstar_king/skill/time_realization/version/1_13
 # 1.14(強化襲撃) 5~6割
-execute if score $percent_10 Boss_x matches 5 run function time_limit:boss/newstar_king/skill/time_realization/version/1.14/
+# 一旦ここだけは予感のためにasをつける
+# 今後はここだか他の場所にasをつければいい感じになるのではないかという推察をだな
+execute if score $percent_10 Boss_x matches 5 run execute as @a[tag=Boss_Fighting] run function time_limit:boss/newstar_king/skill/time_realization/version/1.14/
 # 1.15(ハチミサイル) 4~5割
 execute if score $percent_10 Boss_x matches 4 run function time_limit:boss/newstar_king/skill/time_realization/version/1_15
 # 1.16(強化ピグリン) 3~4割
