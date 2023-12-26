@@ -3,4 +3,10 @@
 # 空からTNTが降ってくる
 # ただ爆発する前で止まるので脅かしイベントではある
 
-me 「空から…TNT！？」
+# これほかのあたり系のものに書き換えてもいいわね
+# https://bugs.mojang.com/browse/MC-254004
+# でtntとかfallingblockにportalcdを設定しても減らないから終わりです
+
+# me 「空から…TNT！？」
+
+me 未作成event2
