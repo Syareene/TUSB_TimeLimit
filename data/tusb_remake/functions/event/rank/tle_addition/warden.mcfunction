@@ -5,4 +5,4 @@
 
 me 「§5§l虚空から何かがうごめいている！？§r」
 
-summon spawner_minecart ~ ~ ~ {Tags:["CooldownRequired"],PortalCooldown:10,SpawnCount:1,SpawnRange:5,MinSpawnDelay:10,MaxSpawnDelay:10,MaxNearbyEntities:99,RequiredPlayerRange:999,SpawnData:{entity:{id:"minecraft:warden"},custom_spawn_rules:{sky_light_limit:{min_inclusive:0,max_inclusive:15},block_light_limit:{min_inclusive:0,max_inclusive:15}}}}
+summon spawner_minecart ~ ~ ~ {Tags:["CooldownRequired"],PortalCooldown:10,SpawnCount:1,SpawnRange:5,MinSpawnDelay:10,MaxSpawnDelay:10,MaxNearbyEntities:99,RequiredPlayerRange:999,SpawnData:{entity:{id:"minecraft:warden",Health:900,Attributes:[{Name:generic.max_health,Base:900}]},custom_spawn_rules:{sky_light_limit:{min_inclusive:0,max_inclusive:15},block_light_limit:{min_inclusive:0,max_inclusive:15}}}}
