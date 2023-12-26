@@ -10,5 +10,6 @@ execute as @a[tag=LoginMessage,scores={Job=1..}] run function time_limit:login/s
 execute if data storage tusb_remake: settings{is_sightseeing:true} run tellraw @a[tag=LoginMessage] {"text":"観光モード中です。","color":"yellow"}
 ### 祈りが表示できれば表示
 tag @a[tag=LoginMessage] add Pray
+function time_limit:login/displaychange
 
 tag @a[tag=LoginMessage] remove LoginMessage

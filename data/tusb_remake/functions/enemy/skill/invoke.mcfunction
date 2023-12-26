@@ -25,6 +25,8 @@ execute if entity @s[tag=PaleRider] run function tusb_remake:enemy/skill/pale_ri
 ### 新星ノ王
 # 本家は王に使用スキル全部tagつけてるけどこっちは一つのtagで管理します
 execute if entity @s[tag=NewStar_King] run function time_limit:boss/newstar_king/skill/
+### 新星様
+execute if entity @s[tag=Shinsei] run function tusb_remake:enemy/skill/shinsei/
 #####
 
 ### 次のスキルとタイミングを設定
