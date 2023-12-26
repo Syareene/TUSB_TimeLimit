@@ -13,6 +13,11 @@ tag @s add Joined
 scoreboard players set @s ChangeSkillSet 0
 scoreboard players set @s SkillSetting 0
 
+# triggerのenable
+scoreboard players enable @s ChangeSkillSet
+
+# メニューはrejoinedで勝手に検知してくれるからenable入れなくてもトリガーが勝手に再度有効化されるっていう罠
+
 
 # msg
 function time_limit:load/tutorial_msg

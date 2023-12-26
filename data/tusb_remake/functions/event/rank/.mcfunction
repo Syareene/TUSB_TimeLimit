@@ -68,14 +68,3 @@ scoreboard players operation @s EventRank += _ EventRank
 # 45で経験値シュルカーが攻略度に応じて出現するようになる
 
 # TLE追加嫌な予感
-
-
-
-# 元々、TUSBデフォの嫌な予感かTLE追加予感かどうなるかの変数をセットしておいて
-# TLEのほうだったら分岐するみたいな
-
-# tusb_remake:login/first_reset で初回ログイン時、Eventrankが-1に設定されているので
-# このタイミングでChooseEventを1にしてあげる
-# 最初は5%引いたらTUSBデフォの予感固定みたいな感じで
-# 2回目以降はTLEのものもでるてきなのでいいかな
-# 初回から乱数使うとちょいめんどいわ
