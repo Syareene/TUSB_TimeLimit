@@ -29,7 +29,11 @@ scoreboard players set @s EventRank -1
 # 追加部分
 
 # 予感分岐用変数初期化
-scoreboard players set @s ChooseEvent 1
+data modify storage math: in set value [1,2]
+function #math:dice
+execute store result score @s ChooseEvent run data get storage math: out.sum 0.9999999999
+# 以前は固定だったが今後は初回ログイン時にランダムで設定することとする
+# scoreboard players set @s ChooseEvent 1
 
 ### 個人ロッカー
 # scoreboard players set @s PersonalLocker 0
