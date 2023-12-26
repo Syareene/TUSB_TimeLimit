@@ -4,7 +4,7 @@
 #
 #> 時計島タイマーを起動させ時を加速させる
 
-me は§4タイムアクセラレーション§lを唱えた！
+me は§4§lタイムアクセラレーション§rを唱えた！
 
 # タイマーセット
 data modify storage tusb_remake: clock_ring_time set value 180
