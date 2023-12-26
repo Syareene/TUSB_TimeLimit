@@ -42,6 +42,8 @@ execute as @e[type=bee,tag=1_15_bee] run scoreboard players reset @s TUSB
 
 execute as @e[type=bee,tag=1_15_bee] at @s as @a[distance=..1] run function time_limit:boss/newstar_king/skill/time_realization/version/1.15/damage
 
+execute as @e[type=bee,tag=1_15_bee] at @s if entity @a[distance=..1] run kill @s
+
 # 後は当たったらハチのキル
 
 # ダメージ与えたならハチをkill
