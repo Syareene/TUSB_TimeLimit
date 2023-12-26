@@ -9,7 +9,7 @@ tag @a add CauseEvent
 tag @a add Pray
 ### 嫌な予感の音
 execute as @a[scores={ChooseEvent=0..1}] at @s run playsound minecraft:block.portal.travel master @s ~ ~100 ~ 0 0.5 0.15
-execute as @a[scores={ChooseEvent=2}] at @s run playsound minecraft:block.portal.trigger master @s ~ ~100 ~ 0 0.5 0.15
+execute as @a[scores={ChooseEvent=2}] at @s run playsound minecraft:entity.warden.emerge master @s ~ ~ ~ 1 0.75 0.15
 ### 画面を赤くする
 worldborder warning distance 20000
 ### 赤い画面を戻すためのタイマーをセット
