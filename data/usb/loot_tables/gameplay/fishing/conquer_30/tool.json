@@ -138,7 +138,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{Enchantments:[{id:\"minecraft:mending\",lvl:1s}]}"
+                            "tag": "{StoredEnchantments:[{id:\"minecraft:mending\",lvl:1s}]}"
                         }
                     ]
                 },
