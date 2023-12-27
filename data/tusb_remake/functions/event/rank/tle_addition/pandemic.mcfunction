@@ -6,9 +6,9 @@
 # AECをだして、AECのdurationが1以上なら該当プレイヤーにtpする、、？
 # ただこれ複数体いたときにどうするよ問題がある
 
-me 「この風…まずい！」
+me 「このかぜ…まずい！」
 
 #AECを召喚、誰かが引っかかったらRangeが伸びるかなー
 # 伝播するだと無限連鎖する可能性があって怖い
 
-summon area_effect_cloud ~ ~ ~ {Particle:"reverse_portal",ReapplicationDelay:20,Radius:5f,RadiusOnUse:1f,Duration:400,WaitTime:20,Effects:[{Id:7,Amplifier:2b,Duration:1},{Id:9,Amplifier:4b,Duration:200},{Id:17,Amplifier:4b,Duration:200},{Id:18,Amplifier:9b,Duration:200},{Id:19,Amplifier:4b,Duration:200},{Id:20,Amplifier:4b,Duration:200}]}
+summon area_effect_cloud ~ ~ ~ {Particle:"reverse_portal",ReapplicationDelay:40,Radius:7.5f,RadiusOnUse:1f,Duration:400,WaitTime:20,Effects:[{Id:7,Amplifier:2b,Duration:1},{Id:9,Amplifier:4b,Duration:200},{Id:17,Amplifier:4b,Duration:200},{Id:18,Amplifier:9b,Duration:200},{Id:19,Amplifier:4b,Duration:200},{Id:20,Amplifier:4b,Duration:200}]}
