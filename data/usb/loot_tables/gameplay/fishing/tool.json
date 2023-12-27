@@ -84,7 +84,7 @@
                     "type": "minecraft:fixed",
                     "name": "_"
                   },
-                  "score": "ConqureIsland",
+                  "score": "ConquerIsland",
                   "scale": 1
                 },
                 "range": {
@@ -97,4 +97,3 @@
       }
     ]
   }
-  
