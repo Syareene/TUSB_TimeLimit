@@ -10,6 +10,11 @@ function time_limit:load/change_supercraft_recipe
 # わこからさんの取引内容を変更
 function time_limit:load/change_record_trade
 
+# あかさめさんのデータを変える
+# すごい釣り竿の入れ食いを5に
+# これ初期スポーンの下にいるから多分modifyできるよな、、、?
+data modify entity 25af5ce7-151a-1e8e-82f2-4eee17b4592a Offers.Recipes[16].sell.tag.Enchantments[{id:"minecraft:lure"}].lvl set value 5
+
 # ボス強化onならここでエンドの構造を変えておく
 # どうするかだけ決めておかないと
 execute if score Enhance_Boss Option matches 1 run execute in the_end at @e[type=armor_stand,tag=Boss_Marker] run function time_limit:settings/boss_enhance/field_generate/generate
