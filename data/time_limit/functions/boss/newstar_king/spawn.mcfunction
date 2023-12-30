@@ -7,7 +7,7 @@
 # いるかわからんこれ
 
 # item kill
-kill @e[type=item,nbt={Item:{id:"minecraft:structure_void",tag:{Boss:1b}}}]
+# kill @e[type=item,nbt={Item:{id:"minecraft:structure_void",tag:{Boss:1b}}}]
 
 # ボススポーン後にやること
 

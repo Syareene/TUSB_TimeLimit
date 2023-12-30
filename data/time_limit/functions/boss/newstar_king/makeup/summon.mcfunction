@@ -58,4 +58,4 @@ title @a subtitle {"text":"§4§ka§c§kb§4§ky§d§ks§4§ks§r～時を司り
     execute summon lightning_bolt run tp @s ~-4 3000 ~
     execute summon lightning_bolt run tp @s ~ 3000 ~-4
 #> この下でspawn funciton実行すればいい感じになるんじゃないですか( ᐛ)
-# execute in the_end as @e[type=item,nbt={Item:{id:"minecraft:structure_void",tag:{Boss:1b}}}] if entity @s at @s run function time_limit:boss/newstar_king/spawn
+execute in the_end at @e[type=armor_stand,tag=Boss_Marker] run function time_limit:boss/newstar_king/spawn

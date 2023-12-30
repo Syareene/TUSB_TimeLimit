@@ -37,7 +37,7 @@ execute in the_end at @e[type=armor_stand,tag=Boss_Enter] as @a[distance=..20] p
 execute in the_end at @e[type=armor_stand,tag=Boss_Marker] as @a[distance=45.25..,tag=Boss_Fighting] run function time_limit:boss/newstar_king/out_field
 
 # ボス召喚
-execute in the_end as @e[type=item,nbt={Item:{id:"minecraft:structure_void",tag:{Boss:1b}}}] if entity @s at @s run function time_limit:boss/newstar_king/spawn
+execute in the_end as @e[type=item,nbt={Item:{id:"minecraft:structure_void",tag:{Boss:1b}}}] if entity @s at @s run function time_limit:boss/newstar_king/makeup/
 
 # ボス戦闘tag剥奪
 # そもそもasがディメンション全体を探索するから意味がないので上の方は意味がない
