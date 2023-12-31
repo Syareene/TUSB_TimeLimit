@@ -4,10 +4,8 @@
 # ワープ
 tp @s 500 101 500
 # tag付与
-# 観戦及びクリエは対象外でいいかなーと
-# まあクリエはボスの攻撃対象外なだけで普通に倍率補正は乗るがね
+# 観戦は対象外でいいかなーと
 tag @s[gamemode=!spectator] add Boss_Fighting
-tag @s[gamemode=creative] remove Boss_Fighting
 # ダイヤ以上の防具耐久値を無限にします
 # ダイヤhelm
 data modify storage player_item_tuner: condition.if set value {id:"minecraft:diamond_helmet"}
