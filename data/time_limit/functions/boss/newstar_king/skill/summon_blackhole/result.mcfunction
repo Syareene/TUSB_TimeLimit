@@ -20,7 +20,6 @@ data modify storage score_damage: Argument set value {Damage:2.00}
 execute as @a[distance=..1,tag=Boss_Fighting] run function score_damage:api/attack
 
 # ぱーちくる
-execute as @a[distance=..1,tag=Boss_Fighting] run effect give @s blindness 3 0
 execute as @a[distance=..1,tag=Boss_Fighting] run effect give @s darkness 3 0
 execute as @a[distance=..1,tag=Boss_Fighting] run effect give @s slowness 3 1
 

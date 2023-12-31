@@ -19,6 +19,6 @@ effect clear @a[distance=..0.95] resistance
 effect clear @a[distance=..0.95] speed
 effect clear @a[distance=..0.95] strength
 # MP減少
-scoreboard players remove @a[distance=..0.95] MP 25
+scoreboard players remove @a[distance=..0.95] MP 10
 # -にならない処理
 execute as @a[distance=..0.95,scores={MP=..25}] run scoreboard players set @s MP 0
