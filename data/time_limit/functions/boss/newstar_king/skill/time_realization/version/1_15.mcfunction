@@ -32,14 +32,14 @@
 
 # tag=Boss_Fighting
 
-execute at @a run summon bee ~ ~0.75 ~10 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee","CooldownRequired"],Rotation:[180.0f,0.0f],PortalCooldown:50}
-execute at @a run summon bee ~7.071 ~0.75 ~7.071 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee","CooldownRequired"],Rotation:[135.0f,0.0f],PortalCooldown:50}
-execute at @a run summon bee ~10 ~0.75 ~ {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee","CooldownRequired"],Rotation:[90.0f,0.0f],PortalCooldown:50}
-execute at @a run summon bee ~7.071 ~0.75 ~-7.071 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee","CooldownRequired"],Rotation:[45.0f,0.0f],PortalCooldown:50}
-execute at @a run summon bee ~ ~0.75 ~-10 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee","CooldownRequired"],Rotation:[0.0f,0.0f],PortalCooldown:50}
-execute at @a run summon bee ~-7.071 ~0.75 ~-7.071 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee","CooldownRequired"],Rotation:[-45.0f,0.0f],PortalCooldown:50}
-execute at @a run summon bee ~-10 ~0.75 ~ {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee","CooldownRequired"],Rotation:[-90.0f,0.0f],PortalCooldown:50}
-execute at @a run summon bee ~-7.071 ~0.75 ~7.071 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee","CooldownRequired"],Rotation:[-135.0f,0.0f],PortalCooldown:50}
+execute at @a[tag=Boss_Fighting] run summon bee ~ ~0.75 ~10 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee","CooldownRequired"],Rotation:[180.0f,0.0f],PortalCooldown:50}
+execute at @a[tag=Boss_Fighting] run summon bee ~7.071 ~0.75 ~7.071 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee","CooldownRequired"],Rotation:[135.0f,0.0f],PortalCooldown:50}
+execute at @a[tag=Boss_Fighting] run summon bee ~10 ~0.75 ~ {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee","CooldownRequired"],Rotation:[90.0f,0.0f],PortalCooldown:50}
+execute at @a[tag=Boss_Fighting] run summon bee ~7.071 ~0.75 ~-7.071 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee","CooldownRequired"],Rotation:[45.0f,0.0f],PortalCooldown:50}
+execute at @a[tag=Boss_Fighting] run summon bee ~ ~0.75 ~-10 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee","CooldownRequired"],Rotation:[0.0f,0.0f],PortalCooldown:50}
+execute at @a[tag=Boss_Fighting] run summon bee ~-7.071 ~0.75 ~-7.071 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee","CooldownRequired"],Rotation:[-45.0f,0.0f],PortalCooldown:50}
+execute at @a[tag=Boss_Fighting] run summon bee ~-10 ~0.75 ~ {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee","CooldownRequired"],Rotation:[-90.0f,0.0f],PortalCooldown:50}
+execute at @a[tag=Boss_Fighting] run summon bee ~-7.071 ~0.75 ~7.071 {NoAI:1b,Invulnerable:1b,Tags:["1_15_bee","CooldownRequired"],Rotation:[-135.0f,0.0f],PortalCooldown:50}
 
 
 # 出した後にダメージ判定functionに入りながら一定のageなら発射みたいな感じやなー
