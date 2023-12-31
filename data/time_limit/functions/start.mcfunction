@@ -1,6 +1,6 @@
 #> time_limit:start
 # 職業島から通常世界に誰か行ったらタイマースタート
-scoreboard players set Start Game 1
+execute if score Start Game matches 0 run scoreboard players set Start Game 1
 # startが1ならタイマーが動くようになってる
 # スタート時の音
 playsound entity.wither.spawn hostile @a ~ ~ ~ 1 1
