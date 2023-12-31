@@ -34,7 +34,7 @@ execute if score Health Boss_Health matches 1.. if score Flag FightingBoss match
 execute in the_end at @e[type=armor_stand,tag=Boss_Enter] as @a[distance=..20] positioned ~10 ~10 ~10 if entity @s[dx=-27,dy=-20,dz=-20] run function time_limit:boss/newstar_king/enter
 
 # ボスフィールド場外プレイヤーを連れ戻す
-execute in the_end at @e[type=armor_stand,tag=Boss_Marker] as @a[distance=45.25..,tag=Boss_Fighting] run function time_limit:boss/newstar_king/out_field
+execute in the_end at @e[type=armor_stand,tag=Boss_Marker] as @a[distance=45..,tag=Boss_Fighting] run function time_limit:boss/newstar_king/out_field
 
 # ボス召喚
 execute in the_end as @e[type=item,nbt={Item:{id:"minecraft:structure_void",tag:{Boss:1b}}}] if entity @s at @s run function time_limit:boss/newstar_king/makeup/
