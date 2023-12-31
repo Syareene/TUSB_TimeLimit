@@ -28,7 +28,7 @@ execute in overworld run forceload add -2800 -360 -2800 -360
 # エンドボス色々用アマスタ
 # ここだけは設定の有無に関わらず設置する
 execute in the_end run kill @e[type=armor_stand,tag=Boss_Marker]
-execute in the_end run summon armor_stand 500.0 100 500.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,Small:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,Tags:["Boss_Marker"],DisabledSlots:4144959}
+execute in the_end run summon armor_stand 500.0 100.0 500.0 {NoGravity:1b,Silent:1b,Invulnerable:1b,Small:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,Tags:["Boss_Marker"],DisabledSlots:4144959}
 
 # ロゴをplace
 place template time_limit:cloudia/tle_logo_downleft -1995 74 -145
