@@ -51,8 +51,8 @@ execute at @e[type=armor_stand,tag=Boss_Marker] if score Count MakeupTick matche
 
 #> 魔法陣出現
 execute at @e[type=armor_stand,tag=Boss_Marker] if score Count MakeupTick matches 302 run function time_limit:boss/newstar_king/makeup/sound2
-execute at @e[type=armor_stand,tag=Boss_Marker] if score Count MakeupTick matches 302..342 run function time_limit:boss/newstar_king/makeup/particle1
+execute at @e[type=armor_stand,tag=Boss_Marker] positioned ~ ~1 ~ if score Count MakeupTick matches 302..342 run function time_limit:boss/newstar_king/makeup/particle1
 
 #> summon
-execute at @e[type=armor_stand,tag=Boss_Marker] if score Count MakeupTick matches 343.. run function time_limit:boss/newstar_king/makeup/summon
+execute at @e[type=armor_stand,tag=Boss_Marker] positioned ~ ~1 ~ if score Count MakeupTick matches 343.. run function time_limit:boss/newstar_king/makeup/summon
 execute at @e[type=armor_stand,tag=Boss_Marker] if score Count MakeupTick matches ..343 run schedule function time_limit:boss/newstar_king/makeup/ 1t
