@@ -27,3 +27,9 @@ execute at @a[tag=Boss_Fighting] run summon spawner_minecart ~ ~2 ~ {Invulnerabl
 
 # ピグリンデータ
 # 金一式、剣持ちとクロスボウ持ちがいてもいいかも
+
+
+summon piglin_brute ~ ~ ~ {Health:500f,IsBaby:0b,IsImmuneToZombification:1b,HandItems:[{id:"minecraft:golden_axe",Count:1b,tag:{Enchantments:[{id:"minecraft:binding_curse",lvl:1s},{id:"minecraft:knockback",lvl:1s},{id:"minecraft:fire_aspect",lvl:5s}]}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:golden_chestplate",Count:1b,tag:{Enchantments:[{id:"minecraft:protection",lvl:10s},{id:"minecraft:fire_protection",lvl:10s},{id:"minecraft:feather_falling",lvl:10s},{id:"minecraft:blast_protection",lvl:10s},{id:"minecraft:projectile_protection",lvl:10s},{id:"minecraft:binding_curse",lvl:1s}]}},{}],Attributes:[{Name:"generic.max_health",Base:150},{Name:"generic.knockback_resistance",Base:1},{Name:"generic.attack_damage",Base:10},{Name:"generic.armor",Base:20}]}
+
+summon piglin ~ ~ ~ {Health:350f,IsBaby:0b,IsImmuneToZombification:1b,HandItems:[{id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:power",lvl:10s},{id:"minecraft:punch",lvl:1s},{id:"minecraft:multishot",lvl:1s},{id:"minecraft:piercing",lvl:3s},{id:"minecraft:quick_charge",lvl:3s}]}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:golden_chestplate",Count:1b,tag:{Enchantments:[{id:"minecraft:protection",lvl:10s},{id:"minecraft:fire_protection",lvl:10s},{id:"minecraft:feather_falling",lvl:10s},{id:"minecraft:blast_protection",lvl:10s},{id:"minecraft:projectile_protection",lvl:10s},{id:"minecraft:binding_curse",lvl:1s}]}},{}],Attributes:[{Name:"generic.max_health",Base:150},{Name:"generic.knockback_resistance",Base:1},{Name:"generic.armor",Base:20}]}
+
