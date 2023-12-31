@@ -6,8 +6,9 @@ kill @s
 # dmgいるかどうかは要検討、このままでも十分強いと思うんだ。
 # デバフ
 effect give @a[distance=..0.95] slowness 15 4
+effect give @a[distance=..0.95] poison 15 4
 effect give @a[distance=..0.95] hunger 15 9
-effect give @a[distance=..0.95] wither 15 2
+effect give @a[distance=..0.95] wither 15 4
 effect give @a[distance=..0.95] instant_damage 1 3
 effect give @a[distance=..0.95] weakness 15 4
 # バフ解除(全部ではない)
